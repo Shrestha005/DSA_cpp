@@ -17,7 +17,12 @@ int main(){
     {
         mpp[arr[i]];
     }
-    
+   
+    //map stores everything in sorted order
+    //iteration in map
+    // for(auto it : mpp){
+    //     cout<< it.first << "->" << it.second << endl;
+    // }
     
     //query
     int q;
