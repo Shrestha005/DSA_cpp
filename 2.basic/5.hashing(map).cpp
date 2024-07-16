@@ -15,14 +15,14 @@ int main(){
     map<int,int> mpp;
     for (int i = 0; i < n; i++)
     {
-        mpp[arr[i]];
+        mpp[arr[i]]++;
     }
    
     //map stores everything in sorted order
     //iteration in map
-    // for(auto it : mpp){
-    //     cout<< it.first << "->" << it.second << endl;
-    // }
+    for(auto it : mpp){
+        cout<< it.first << "->" << it.second << endl;
+    }
     
     //query
     int q;
