@@ -1,7 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+void countFreq(int arr[], int n){
+    vector<bool> visited(n, false);
 
+    int maxFreq= 0, minFre
+}
 
 
 
