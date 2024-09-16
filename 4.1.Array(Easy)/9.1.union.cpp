@@ -1,10 +1,7 @@
 //Done in 2 ways using set and map
-
 //brute 1(using map)
 #include <bits/stdc++.h>
 using namespace std;
-
-
 vector <int> findUnion(int arr1[], int arr2[], int n1, int n2){
     map <int, int> freq;
     vector <int> Union;

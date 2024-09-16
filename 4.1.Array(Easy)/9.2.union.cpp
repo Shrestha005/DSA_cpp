@@ -1,8 +1,6 @@
 //optimal(using pointers)
-
 #include <bits/stdc++.h>
 using namespace std;
-
 vector <int> findUnion(int arr1[], int arr2[], int n1, int n2){
     int i= 0, j= 0; //pointers of both arr
     vector <int> Union;
@@ -24,7 +22,6 @@ vector <int> findUnion(int arr1[], int arr2[], int n1, int n2){
             }
             j++;
         }
-        
     }
     while (i<n1)
     {
@@ -34,7 +31,7 @@ vector <int> findUnion(int arr1[], int arr2[], int n1, int n2){
         }
         i++;
     }
-    while (i<n1)
+    while (j<n2)
     {
         if (Union.back() != arr2[j])
         {
@@ -46,7 +43,6 @@ vector <int> findUnion(int arr1[], int arr2[], int n1, int n2){
 }
 
 int main()
-
 {
   int n1 = 10, n2 = 7;
   int arr1[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
