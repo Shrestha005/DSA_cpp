@@ -1,7 +1,4 @@
-//optimal 2
-
-
-
+//optimal 2 : WITH XOR
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -26,4 +23,3 @@ int main()
     cout << "The missing number is: " << ans << endl;
     return 0;
 }
-

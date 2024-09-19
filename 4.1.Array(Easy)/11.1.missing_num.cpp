@@ -1,4 +1,4 @@
-//optimal 1
+//optimal 1 : WITH SUM OF NO.
 #include <bits/stdc++.h>
 using namespace std;
 
