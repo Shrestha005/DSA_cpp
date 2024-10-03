@@ -1,5 +1,7 @@
 //brute force
 
+//we will have a target value given and will find out 2 numbers that sums up to be the target value
+
 //Type 1 : return YES or NO
 #include <bits/stdc++.h>
 using namespace std;
