@@ -90,7 +90,7 @@ int majorityElement(vector<int> v){
             cnt--;
         }
     }
-    //checking is el is mojority element
+    //checking is el is majority element
     int cnt1= 0;
     for (int i = 0; i < n; i++)
     {

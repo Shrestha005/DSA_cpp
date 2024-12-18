@@ -6,8 +6,7 @@ void Rotatetoleft(int arr[], int n, int k)
   if (n == 0)
     return;
   k = k % n;
-  if (k > n)
-    return;
+
   int temp[k];
   for (int i = 0; i < k; i++)
   {
