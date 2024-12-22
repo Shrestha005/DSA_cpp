@@ -23,8 +23,8 @@ int getLongestSubarray(vector<int> &a, long long k){
         {
             sum += a[right];
         }
-        return maxLen;  
     }   
+    return maxLen;  
 }
 
 int main()
