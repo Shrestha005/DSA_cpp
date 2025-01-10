@@ -26,7 +26,7 @@ using namespace std;
 
 
 
-// Optimal
+// Optimal 2
 int floorSqrt(int n){
     int low= 1;
     int high= n;
