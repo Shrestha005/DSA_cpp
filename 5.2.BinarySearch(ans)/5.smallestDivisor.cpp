@@ -4,7 +4,7 @@ using namespace std;
 //Brute
 // int divisor(vector<int> &arr, int threshold){
 //     int n= arr.size();
-//     int maxi= *max(arr.begin(), arr.end());
+//     int maxi= *max_element(arr.begin(), arr.end());
 //     for(int d=1; d<=maxi; d++){
 //         int sum=0;
 //         for(int i=0; i<n; i++){
@@ -36,7 +36,7 @@ int divisor(vector<int> &arr, int threshold){
     int n= arr.size();
     if(n>threshold) return -1;
     int low=1;
-    int high= *max(arr.begin(), arr.end());
+    int high= *max_element(arr.begin(), arr.end());
     while(low<=high){
         int mid= (low+high)/2;
         if(sumByDivisor(arr,mid)<=threshold) high= mid-1;
