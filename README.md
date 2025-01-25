@@ -7,3 +7,5 @@ IMPORTANT NOTES:
 2. In Majority Element | The optimal approach is called Moore's Voting Algorithm
 
 3. Maximum Subarray Sum | The optimal approach is called Kadane's Algorithm
+
+4. Middle Node of a LL | The optimal approach is called Tortoise and Hare Algorithm
