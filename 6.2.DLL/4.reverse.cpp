@@ -1,6 +1,42 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+class Node{
+    public:
+    int data;
+    Node* next;
+    Node* back;
+    public:
+    Node(int data1, Node*next1, Node*back1){
+        data= data1;
+        next= next1;
+        back= back1;
+    }
+    Node(int data1){
+        data= data1;
+        next= nullptr;
+        back= nullptr;
+    }
+};
+Node* convertArrToDLL(vector<int> &arr){
+    Node* head= new Node(arr[0]);
+    Node* prev= head;
+    for(int i= 1; i< arr.size(); i++){
+        Node* temp= new Node(arr[i],nullptr,prev);
+        prev->next=temp;
+        prev=prev->next; //or prev=temp
+    }
+    return head;
+}
+void printLL(Node* head){
+    while (head!=NULL)
+    {
+        cout<< head->data<< " ";
+        head= head->next;
+    }
+}
+
+
 //Brute
 // class Node{
 //     public:
@@ -66,55 +102,45 @@ using namespace std;
 //     return 0;
 // }
 
-//Optimal
-class Node{
-    public:
-    int data;
-    Node* next;
-    Node* back;
-    public:
-    Node(int data1, Node*next1, Node*back1){
-        data= data1;
-        next= next1;
-        back= back1;
-    }
-    Node(int data1){
-        data= data1;
-        next= nullptr;
-        back= nullptr;
-    }
-};
-Node* convertArrToDLL(vector<int> &arr){
-    Node* head= new Node(arr[0]);
-    Node* prev= head;
-    for(int i= 1; i< arr.size(); i++){
-        Node* temp= new Node(arr[i],nullptr,prev);
-        prev->next=temp;
-        prev=prev->next; //or prev=temp
-    }
-    return head;
-}
-void printLL(Node* head){
-    while (head!=NULL)
-    {
-        cout<< head->data<< " ";
-        head= head->next;
-    }
-}
+//Optimal 1(2ways)
+// Node* reverseLL(Node* head){
+//     if(head==NULL||head->next==NULL) return head;
+//     Node* prev= NULL; 
+//     Node* current= head;
+//     while (current!=NULL)
+//     {
+//         prev= current->back;
+//         current->back= current->next;
+//         current->next= prev;
+//         current= current->back;
+//     }    
+//     return prev->back;
+// }
+// //OR
+// Node* reverseLL(Node* head){
+//     if(head==NULL||head->next==NULL) return head;
+//     Node* prev= NULL; 
+//     Node* current= head;
+//     while (current!=NULL)
+//     {
+//         Node* front= current->next;
+//         current->next= prev;
+//         prev= current;
+//         current= front;
+//     }    
+//     return prev;
+// }
+
+//Optimal 2(Recursive)
 Node* reverseLL(Node* head){
     if(head==NULL||head->next==NULL) return head;
-    Node* prev= NULL; 
-    Node* current= head;
-    while (current!=NULL)
-    {
-        prev= current->back;
-        current->back= current->next;
-        current->next= prev;
-        
-        current= current->back;
-    }    
-    return prev->back;
+    Node* newHead= reverseLL(head->next);
+    Node* front= head->next;
+    front->next= head;
+    head->next= NULL;
+    return newHead;
 }
+
 int main(){   
     vector<int> arr= {1,2,3,4};
     Node* head= convertArrToDLL(arr);
