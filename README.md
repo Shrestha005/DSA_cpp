@@ -8,4 +8,4 @@ IMPORTANT NOTES:
 
 3. Maximum Subarray Sum | The optimal approach is called Kadane's Algorithm
 
-4. Middle Node of a LL | The optimal approach is called Tortoise and Hare Algorithm
+4. Middle Node of a LL | Loop Detection in LL | The optimal approach is called Floyd's Cycle Detection Algorithm (or the Tortoise and Hare Algorithm)
