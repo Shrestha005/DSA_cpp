@@ -37,3 +37,9 @@ bool isValid(vector<vector<char>>& board, int row, int col, char c){
     }
     return true;
 }
+
+
+//tc is O(9(n ^ 2))
+//in the worst case, for each cell in the n2 board, we have 9 possible numbers
+
+//sc O(1)
